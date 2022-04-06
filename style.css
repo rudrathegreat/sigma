@@ -1,0 +1,156 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #3D66F5, #7232FA);
+    overflow-x:hidden;
+    overflow-y:hidden;
+    width:100%;
+    height:100vh;
+    display:flex;
+    color:white;
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(to bottom right, #3D66F5, #7232FA);
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:1vh;
+    opacity:1;
+    pointer-events: none;
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+.loading * {
+    opacity:0;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+.main {
+    width:80%;
+    height:80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:5vh;
+}
+
+.main img {
+    width:40%;
+}
+
+.loading img {
+    width:20%;
+}
+
+.main .container {
+    display:flex;
+    gap:3vw;
+}
+
+.main .form-names {
+    display:flex;
+    flex-direction: column;
+    gap:4vh;
+    justify-content: space-between;
+}
+
+.main h1 {
+    font-weight:500;
+}
+
+.main .inputs {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    gap:3vh;
+}
+
+.main input {
+    outline:0;
+    height:3em;
+    background:none;
+    border:2px solid white;
+    color:white;
+    font-family:"Inter", sans-serif;
+    border-radius:10px;
+    padding-left:1em;
+}
+
+.side {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    padding-left:5vw;
+    gap:10vh;
+}
+
+h2 {
+    font-size:2em;
+    font-weight:300;
+    color:white;
+}
+
+h3 {
+    font-weight:700;
+    font-size:6em;
+    margin-top:2vh;
+}
+
+a {
+    display: inline-block;
+    padding:2vh 4vw;
+    color:white;
+    font-size:1.25em;
+    text-decoration: none;
+    border-radius:10px;
+    border:2px solid white;
+    font-weight:300;
+    transition: color 0.2s ease-in-out, background 0.2s ease-out;
+}
+
+a:hover {
+    background:white;
+    color:#7232FA;
+    transition: color 0.2s ease-in-out, background 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
