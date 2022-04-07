@@ -19,44 +19,46 @@
     <div class="main">
         <img src="text.png" alt="Enter Inputs">
         <div class="container">
-            <div class="form-names">
-                <div class="field">
-                    <h1>Area (m<sup>2</sup>)</h1>
+            <div class="form">
+                <div class="form-names">
+                    <div class="field">
+                        <h1>Area (m<sup>2</sup>)</h1>
+                    </div>
+                    <div class="field">
+                        <h1>Efficiency (%)</h1>
+                    </div>
+                    <div class="field">
+                        <h1>Bandwidth (MHz)</h1>
+                    </div>
+                    <div class="field">
+                        <h1>Flux (Jy)</h1>
+                    </div>
+                    <div class="field">
+                        <h1>Time (s)</h1>
+                    </div>
+                    <div class="field">
+                        <h1>System Temperature (K)</h1>
+                    </div>
+                    <div class="field">
+                        <h1>Number of Polarisations</h1>
+                    </div>
                 </div>
-                <div class="field">
-                    <h1>Efficiency (%)</h1>
+                <div class="inputs">
+                    <input type="text" id="area">
+                    <input type="text" id="efficiency">
+                    <input type="text" id="bandwidth">
+                    <input type="text" id="flux">
+                    <input type="text" id="time">
+                    <input type="text" id="tsys">
+                    <input type="text" id="np">
                 </div>
-                <div class="field">
-                    <h1>Bandwidth (MHz)</h1>
-                </div>
-                <div class="field">
-                    <h1>Flux (Jy)</h1>
-                </div>
-                <div class="field">
-                    <h1>Time (s)</h1>
-                </div>
-                <div class="field">
-                    <h1>System Temperature (K)</h1>
-                </div>
-                <div class="field">
-                    <h1>Number of Polarisations</h1>
-                </div>
-            </div>
-            <div class="inputs">
-                <input type="text" id="area">
-                <input type="text" id="efficiency">
-                <input type="text" id="bandwidth">
-                <input type="text" id="flux">
-                <input type="text" id="time">
-                <input type="text" id="tsys">
-                <input type="text" id="np">
             </div>
             <div class="side">
                 <div class="answer">
                     <h2>The SNR will be</h2>
                     <h3 id="answer">None</h3>
                 </div>
-                <a onclick="calculateSNR();">Calculate</a>
+                <a onclick="calculateSNR();" class="normal">Calculate</a>
             </div>
         </div>
     </div>
