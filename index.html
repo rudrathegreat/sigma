@@ -72,9 +72,9 @@
             var tsys = document.getElementById("tsys").value;
             var np = document.getElementById("np").value;
             if (area != "nothing" && efficiency != "nothing" && bandwidth != "nothing" && flux != "nothing" && time != "nothing" && tsys != "nothing" && np != "nothing"){
-                var k = 1.38064852 * (10**-23);
-                var g = (parseFloat(efficiency) * parseFloat(area)) / (2 * parseFloat(k)) * (10**-26);
-                var snr = (parseFloat(flux) * parseFloat(g) * Math.sqrt((parseFloat(time)*parseFloat(bandwidth)*1000*parseFloat(np)))) / parseFloat(tsys);
+                var k = 1.38064852e-23;
+                var g = (((parseFloat(efficiency) * parseFloat(area)) / 100) / (2 * parseFloat(k))) * (10**-26);
+                var snr = ((parseFloat(flux) * parseFloat(g)) / parseFloat(tsys)) * Math.sqrt((parseFloat(time)*parseFloat(bandwidth)*1000000*parseFloat(np)));
                 var answer = document.getElementById("answer");
                 answer.innerHTML = snr.toFixed(1);
             }
